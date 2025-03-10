@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>部門結果</title>
+    <title>部署名結果</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="container mt-5">
-        <h1 class="text-center">部門詳細</h1>
+        <h1 class="text-center">部署名詳細</h1>
         <div class="card mt-4">
             <div class="card-body">
-                <p class="card-text"><strong>部門名:</strong> <span th:text="${department.name}"></span></p>
+                <p class="card-text"><strong>部署ID:</strong> <span th:text="${department.departmentId}"></span></p>
+                <p class="card-text"><strong>部署名:</strong> <span th:text="${department.name}"></span></p>
+                <p class="card-text"><strong>責任者:</strong> <span th:text="${department.manager}"></span></p>
+                <p class="card-text"><strong>成立日:</strong> <span th:text="${#temporals.format(department.establishDate, 'yyyy-MM-dd')}"></span></p>
             </div>
         </div>
     </div>
